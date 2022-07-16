@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="{% block siteDescription %} {% endblock siteDescription %}" />
+    <meta name="keywords" content="Can Okay, Can Okay Blog,{% block siteKeywords %} {% endblock siteKeywords %}" />
+    <meta name="author" content="Can Okay" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>{% block headerTitle %} {% endblock headerTitle %}</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:700%7CNunito:300,600" rel="stylesheet">
+		
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="{% static 'blog/css/style.css' %}"/>
+
+    {% block pageHeader %}
+
+    {% endblock pageHeader %}
+    </head>
+	<body>
+
+		<!-- Header -->
+    {% include 'blog/components/header.html' %}
+    <!-- /Header -->
+
+    {% block content %}
+
+    {% endblock content %}
+
+		<!-- Footer -->
+    {% include 'blog/components/footer.html' %}
+		<!-- /Footer -->
+
+		<!-- jQuery Plugins -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static 'blog/js/main.js' %}"></script>
+    {% block pageJs %}
+
+    {% endblock pageJs %}
+	</body>
+</html>
